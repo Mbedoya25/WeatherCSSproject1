@@ -4,7 +4,7 @@ import os
 
 app = Flask(__name__)
 
-# Your OpenWeatherMap API key
+# my OpenWeatherMap API key
 API_KEY = "1e95ccbddb94abee683c685339ab1905"   # ← replace this with your real key
 
 @app.route("/")
