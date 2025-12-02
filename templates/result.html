@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather Results</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+{% if error %}
+    <h2>{{ error }}</h2>
+    <a href="/">Go Back</a>
+{% else %}
+    <h1>Weather for {{ city }}</h1>
+    <p><strong>Temperature:</strong> {{ temp }}°F</p>
+    <p><strong>Feels Like:</strong> {{ feels_like }}°F</p>
+    <p><strong>Humidity:</strong> {{ humidity }}%</p>
+    <p><strong>Wind Speed:</strong> {{ wind }} mph</p>
+    <p><strong>Description:</strong> {{ description }}</p>
+
+    {% if warning %}
+        <h2 style="color:red;">{{ warning }}</h2>
+    {% endif %}
+
+    <a href="/">Search another city</a>
+{% endif %}
+
+</body>
+</html>
